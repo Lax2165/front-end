@@ -7,7 +7,6 @@ import { AgmCoreModule } from '@agm/core';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 
@@ -32,6 +31,12 @@ import { RemoveElementPipe } from './filters/remove-from-array/remove-element.pi
 import { FormControlService } from './service/form-control.service';
 import { DynamicFormComponent } from './page/fragments/allUIComponents/dynamic-form/dynamic-form.component';
 import { FormFieldsService } from './service/form-fields.service';
+import { CircleProgressComponent } from './page/fragments/charts/circle-progress/circle-progress.component';
+import { ChartDirectiveDirective } from './directives/line-chart/chart-directive.directive';
+import { BarchartDirective } from './directives/bar-chart/barchart.directive';
+import { SpiderchartDirective } from './directives/spider-chart/spiderchart.directive';
+import { CircleProgressDirective } from './directives/circle-progress/circle-progress.directive';
+
 
 const appRoutes: Routes = [
   {
@@ -70,7 +75,13 @@ const appRoutes: Routes = [
     SdrcTableComponent,
     RemoveElementPipe,
     DynamicFormComponent,
-  ],
+    CircleProgressComponent,
+    ChartDirectiveDirective,
+    BarchartDirective,
+    SpiderchartDirective,    
+    CircleProgressDirective,
+    ],
+
   imports: [
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAhzl6qzvh6FdIIkDviVE39feBkLiBa6Bo'
